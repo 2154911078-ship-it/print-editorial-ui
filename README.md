@@ -11,6 +11,11 @@ agent_created: true
 
 # Print Editorial UI
 
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/2154911078-ship-it/print-editorial-ui@master/docs/preview-light.png" width="49%" alt="亮色主题">
+  <img src="https://cdn.jsdelivr.net/gh/2154911078-ship-it/print-editorial-ui@master/docs/preview-dark.png" width="49%" alt="暗色主题">
+</p>
+
 ## 用途
 
 当用户需要：
