@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Print Editorial UI — 模板</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="animations.css">
+</head>
+<body>
+<div class="app" id="app">
+  <header class="masthead">
+    <a class="masthead__brand" href="#">
+      <span class="masthead__mark">Brand<i>.</i></span>
+      <span class="masthead__sub" id="brand-sub">副标题</span>
+    </a>
+    <nav class="masthead__nav" id="nav" aria-label="主导航">
+      <a class="mnav is-active" href="#/page1" data-nav="page1">
+        <span class="mnav__no">01</span>页面一
+      </a>
+      <a class="mnav" href="#/page2" data-nav="page2">
+        <span class="mnav__no">02</span>页面二
+      </a>
+      <a class="mnav" href="#/page3" data-nav="page3">
+        <span class="mnav__no">03</span>页面三
+      </a>
+    </nav>
+    <div class="masthead__meta">
+      <div class="masthead__clock">
+        <span class="masthead__time" id="clock">--:--</span>
+        <span class="masthead__date" id="today">—</span>
+      </div>
+      <div class="masthead__actions">
+        <button class="ghost-btn" id="theme-btn" title="切换主题">☀</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="view" id="view">
+      <div class="page-head">
+        <span class="page-head__no">01</span>
+        <h1 class="page-head__title">页面标题</h1>
+        <span class="page-head__eyebrow">PAGE</span>
+      </div>
+
+      <!-- 示例：KPI 四栏 -->
+      <div class="kpis">
+        <div class="kpi">
+          <div class="kpi__label">
+            <span>指标一</span>
+          </div>
+          <div class="kpi__value"><small>¥</small>12,450</div>
+          <div class="kpi__foot">
+            <span class="delta delta--up">↑ 12%</span>
+            <span>环比</span>
+          </div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__label">指标二</div>
+          <div class="kpi__value">89</div>
+          <div class="kpi__foot">
+            <span class="delta delta--down">↓ 3%</span>
+          </div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__label">指标三</div>
+          <div class="kpi__value">2,340</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__label">指标四</div>
+          <div class="kpi__value">98.2<small>%</small></div>
+        </div>
+      </div>
+
+      <!-- 示例：三栏卡片 -->
+      <div class="grid-3" style="margin-top:32px">
+        <div class="card card--fill">
+          <div class="card__head">
+            <span class="card__title">卡片标题</span>
+            <span class="card__sub">副标题说明</span>
+          </div>
+          <div class="card__body">
+            <p class="muted">卡片内容区域。使用 card--fill 可以让卡片内容撑满，底部元素对齐。</p>
+          </div>
+        </div>
+        <div class="card card--fill">
+          <div class="card__head">
+            <span class="card__title">第二栏</span>
+          </div>
+          <div class="card__body">
+            <p>三栏布局使用 grid-3，栏间用 1px 竖线分隔。</p>
+          </div>
+        </div>
+        <div class="card card--fill">
+          <div class="card__head">
+            <span class="card__title">第三栏</span>
+          </div>
+          <div class="card__body">
+            <p>暗色主题下竖线颜色自动跟随 --line 变量。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 示例：菜单列表 -->
+      <div style="margin-top:32px">
+        <h2 style="font-family:var(--serif);font-size:20px;font-weight:500;margin-bottom:16px">菜单列表</h2>
+        <div class="menu-list">
+          <button class="menu-row">
+            <span class="menu-row__no">01</span>
+            <span class="menu-row__art">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M14 18h20v13a6 6 0 0 1-6 6h-8a6 6 0 0 1-6-6V18z"/>
+                <ellipse cx="24" cy="18" rx="10" ry="2.6"/>
+              </svg>
+            </span>
+            <span class="menu-row__body">
+              <span class="menu-row__name">示例商品</span>
+              <span class="menu-row__meta">分类 · 余 12</span>
+            </span>
+            <span class="menu-row__dots"></span>
+            <span class="menu-row__price">¥28</span>
+            <span class="menu-row__add">+</span>
+          </button>
+          <button class="menu-row">
+            <span class="menu-row__no">02</span>
+            <span class="menu-row__art">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M16 12h16l-1.8 24a3 3 0 0 1-3 2.8h-6.4a3 3 0 0 1-3-2.8L16 12z"/>
+                <ellipse cx="24" cy="12" rx="8" ry="2.2"/>
+              </svg>
+            </span>
+            <span class="menu-row__body">
+              <span class="menu-row__name">另一个商品</span>
+              <span class="menu-row__meta">分类 · 余 8</span>
+            </span>
+            <span class="menu-row__dots"></span>
+            <span class="menu-row__price">¥35</span>
+            <span class="menu-row__add">+</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 示例：表格 -->
+      <div style="margin-top:32px">
+        <h2 style="font-family:var(--serif);font-size:20px;font-weight:500;margin-bottom:16px">数据表格</h2>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>编号</th>
+                <th>名称</th>
+                <th>状态</th>
+                <th style="text-align:right">金额</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell-num">001</td>
+                <td class="cell-strong">示例条目</td>
+                <td><span class="badge badge--paid">已完成</span></td>
+                <td class="cell-num">¥1,200</td>
+              </tr>
+              <tr>
+                <td class="cell-num">002</td>
+                <td class="cell-strong">另一条目</td>
+                <td><span class="badge badge--open">进行中</span></td>
+                <td class="cell-num">¥850</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 示例：按钮与分段器 -->
+      <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+        <button class="btn btn--primary">主按钮</button>
+        <button class="btn btn--ghost">幽灵按钮</button>
+        <button class="btn btn--danger">危险操作</button>
+        <div class="seg">
+          <button class="seg__btn is-active">7 天</button>
+          <button class="seg__btn">14 天</button>
+          <button class="seg__btn">30 天</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="statusbar" id="statusbar">
+    <span class="statusbar__item"><i class="statusbar__dot"></i><span>就绪</span></span>
+    <span class="statusbar__item">v1.0.0</span>
+    <span class="statusbar__spacer"></span>
+    <span class="statusbar__item statusbar__item--soft">Print Editorial UI</span>
+    <span class="statusbar__item statusbar__item--kbd"><kbd>Tab</kbd> 切换</span>
+  </footer>
+</div>
+
+<script>
+// 主题切换示例
+document.getElementById('theme-btn').addEventListener('click', () => {
+  const html = document.documentElement;
+  const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+  html.dataset.theme = next;
+  localStorage.setItem('theme', next);
+});
+
+// 恢复主题
+const saved = localStorage.getItem('theme');
+if (saved) document.documentElement.dataset.theme = saved;
+
+// 时钟
+function tick() {
+  const now = new Date();
+  const h = String(now.getHours()).padStart(2, '0');
+  const m = String(now.getMinutes()).padStart(2, '0');
+  document.getElementById('clock').textContent = `${h}:${m}`;
+  const mo = now.getMonth() + 1;
+  const d = now.getDate();
+  const wd = ['日','一','二','三','四','五','六'][now.getDay()];
+  document.getElementById('today').textContent = `${mo}月${d}日 周${wd}`;
+}
+tick();
+setInterval(tick, 30000);
+</script>
+</body>
+</html>

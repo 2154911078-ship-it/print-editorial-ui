@@ -1,0 +1,95 @@
+/* ============================================================================
+   tokens.css —— 编辑部式设计令牌
+   一套「纸与墨」的视觉语言：象牙纸底、墨黑文字、朱砂红单一强调色。
+   刻意不使用：渐变背景、玻璃模糊、卡片投影、大圆角。
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* 三套字体各司其职：标题衬线、正文无衬线、数字等宽 */
+  --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun",
+    Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "PingFang SC",
+    "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --mono: "SF Mono", "JetBrains Mono", "Roboto Mono", Consolas, "Courier New", monospace;
+
+  /* 纸 */
+  --bg: #f5f2eb;
+  --bg-2: #ece7db;
+  --panel: #f5f2eb;
+  --panel-2: #ece7db;
+  --panel-3: #e2dccd;
+
+  /* 墨与线 */
+  --ink: #16150f;
+  --text: #16150f;
+  --text-2: #4b463b;
+  --text-3: #8a8373;
+  --line: #d7d1c2;
+  --line-2: #c3bcab;
+  --line-strong: #16150f;
+
+  /* 朱砂红：全站唯一强调色 */
+  --brand: #c1442e;
+  --brand-2: #a3341f;
+  --brand-soft: rgba(193, 68, 46, 0.09);
+
+  /* 语义色（低饱和，避免与强调色抢戏） */
+  --mint: #2f5d4a;
+  --mint-soft: rgba(47, 93, 74, 0.09);
+  --amber: #8f6112;
+  --rose: #a83232;
+  --green: #2f6b4f;
+  --blue: #2b4f7a;
+  --violet: #5b4a7a;
+
+  --overlay: rgba(22, 21, 15, 0.42);
+  --shadow-2: 0 20px 46px -28px rgba(22, 21, 15, 0.5);
+  --shadow-3: 0 36px 80px -36px rgba(22, 21, 15, 0.55);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --dur-fast: 140ms;
+  --dur: 280ms;
+  --dur-slow: 520ms;
+
+  --masthead-h: 76px;
+  --status-h: 26px;
+  --max-w: 1520px;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #121110;
+  --bg-2: #1a1815;
+  --panel: #121110;
+  --panel-2: #1a1815;
+  --panel-3: #232019;
+
+  --ink: #f0ece1;
+  --text: #f0ece1;
+  --text-2: #b2ac9d;
+  --text-3: #7c7768;
+  --line: #2e2a23;
+  --line-2: #423d33;
+  --line-strong: #f0ece1;
+
+  --brand: #e0603f;
+  --brand-2: #f0795a;
+  --brand-soft: rgba(224, 96, 63, 0.12);
+
+  --mint: #6fae91;
+  --mint-soft: rgba(111, 174, 145, 0.1);
+  --amber: #d0a05a;
+  --rose: #d97b7b;
+  --green: #6fae91;
+  --blue: #8ab0d8;
+  --violet: #a596c9;
+
+  --overlay: rgba(6, 6, 5, 0.66);
+  --shadow-2: 0 20px 46px -28px rgba(0, 0, 0, 0.9);
+  --shadow-3: 0 36px 80px -36px rgba(0, 0, 0, 0.95);
+}
